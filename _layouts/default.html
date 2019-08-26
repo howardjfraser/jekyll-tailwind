@@ -3,9 +3,22 @@
 
 {% include header.html %}
 
-<main
-  class="bg-red-500 flex h-screen items-center justify-center w-full">
-  {{ content }}
-</main>
+<body class="font-sans text-gray-700">
+  <main>
+    <section id="debug" class="hidden bg-yellow-200">
+      <div class="text-center p-2 text-gray-600">
+        <span class="xs:block sm:hidden">XS</span>
+        <span class="hidden sm:block md:hidden">SM</span>
+        <span class="hidden md:block lg:hidden">MD</span>
+        <span class="hidden lg:block xl:hidden">LG</span>
+        <span class="hidden xl:block">XL</span>
+      </div>
+    </section>
 
-{% include footer.html %}
+    {{ content }}
+
+  </main>
+
+  {% include footer.html %}
+
+</body>
